@@ -17,10 +17,7 @@ vim script-lab3.sh
  ```
 for s in {0..255}
 ```
-s here is the variable of the number that will change.
-
-
-then write the condetion of the loop
+s here is the variable of the number that will change. then write the condetion of the loop
 ```
 do
     if ping -c 1 -W 1 192.168.1.$s > /dev/null 2>&1
