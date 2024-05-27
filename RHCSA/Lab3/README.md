@@ -6,16 +6,19 @@ For Example :
 ```
 vim script-lab3.sh
 ```
+
 2- start with #!/bin/bash so that it recognizes it as a script
 ```
 #!/bin/bash
 ```
+
  3- create a for loop that include the number of ips that available in your subnet
  in my case my subnet is 192.168.1.0/24 so the loop will be from 0 to 255
  ```
 for s in {0..255}
 ```
-s here is the variable of the number that will change 
+s here is the variable of the number that will change.
+
 then write the condetion of the loop
 ```
 do
@@ -27,6 +30,7 @@ do
     fi
 done
 ```
+
 that make the full script is :
 ```
 #!/bin/bash
@@ -41,10 +45,12 @@ do
     fi
 done
 ```
+
 4- give the script file the pirmission to be executed
 ```
 chmod +x script-lab3.sh
 ```
+
 5- run the script
 ```
 ./script-lab3.sh
