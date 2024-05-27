@@ -82,6 +82,7 @@ Repeat the steps to create another group.
 <br />
 
 Attach the "AmazonS3FullAccess" policy to the Developer group.
+
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/42379f59-22bb-4a8e-8d62-192111e86a77" width="700" >
 
 <br />
