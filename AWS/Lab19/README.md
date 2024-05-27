@@ -1,10 +1,10 @@
 ### create aws account , set billing alarm create 2 IAM groups (admin-developer) admin group has admin permissions, developer group only access to s3 , create admin-1 user console access only with MFA & admin-2 prog user with cli access only and list users and groups using commands , create dev-user with programmatic and console access 
 
-##### Step 1: Create an AWS Account
+#### Step 1: Create an AWS Account
 Go to AWS Signup page.
 Follow the instructions to create a new account.
 
-##### Step 2: Set Billing Alarm
+#### Step 2: Set Billing Alarm
 1- Open the CloudWatch console 
 
 2- In the navigation pane, click on Alarms, then click Create Alarm.
