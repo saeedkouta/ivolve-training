@@ -78,6 +78,7 @@ then Create Group
 <br />
 
 Repeat the steps to create another group.
+
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/023183b6-d106-4c50-8061-8808936eb761" width="700" >
 <br />
 
