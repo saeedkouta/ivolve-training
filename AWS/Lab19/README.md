@@ -47,4 +47,49 @@ the alarm won't work until the subscription is confirmed
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/469b8b40-68b7-4c5b-a51c-52126052d873" width="700" >
 
+<br />
+
+#### Step 3: Create IAM Groups and Policies
+1- Create Admin Group
+
+1.1. Open the IAM console.
+
+1.2. In the navigation pane, choose Groups, then Create New Group.
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/68c3adca-80ee-415d-8372-856c5a98c62a" width="700" >
+<br />
+<br />
+
+1.3. Enter the group name
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/60c4a615-2974-4eda-afe2-12e453571ae0" width="700" >
+<br />
+<br />
+
+1.4. Attach the AdministratorAccess policy.
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/b06cc587-1db9-4dd4-8905-276940832a49" width="700" >
+<br />
+then Create Group
+<br />
+<br />
+
+1.5. Create Developer Group
+<br />
+
+Repeat the steps to create another group.
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/023183b6-d106-4c50-8061-8808936eb761" width="700" >
+<br />
+
+Attach the "AmazonS3FullAccess" policy to the Developer group.
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/42379f59-22bb-4a8e-8d62-192111e86a77" width="700" >
+
+<br />
+
+#### Step 4: Create IAM Users
+
+1- Create admin-1 User (Console Access Only with MFA)
+
+
+
 
