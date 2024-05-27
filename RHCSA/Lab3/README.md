@@ -19,6 +19,7 @@ for s in {0..255}
 ```
 s here is the variable of the number that will change.
 
+
 then write the condetion of the loop
 ```
 do
