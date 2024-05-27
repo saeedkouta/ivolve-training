@@ -1,6 +1,6 @@
 ### Create a Shell-Script that would ping every server in the subnet if ping succeeds statment "Server 192.168.1.s is up and running" will be displayed otherwise if it fails the statment "Server 192.168.1.s" is unreachable" will be displayed
 
-##### 1- create a file with .sh extension 
+1- create a file with .sh extension 
 
 For Example :
 ```
