@@ -92,6 +92,32 @@ Attach the "AmazonS3FullAccess" policy to the Developer group.
 
 1- Create admin-1 User (Console Access Only with MFA)
 
+1.1. Adding the admin-1 User to the Admin Group
 
+1.2. Using Google Authenticator for MFA
 
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/4133c254-3c4e-4e6c-8109-80fa0776fd8a" width="700" >
+<br />
+<br />
 
+2- Create admin-2 User (Cli Access Only)
+
+2.1. Adding the admin-2 User to the Admin Group
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/fed3016e-60ae-47ad-8697-653dee2d920b" width="700" >
+
+2.2. Trying to see the AdminAccess With Cli
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/fa3c355f-0b16-4420-808c-15fd71e50f17" width="700" >
+<br />
+<br />
+
+3- Create Dev User (Cli and Console Access)
+
+3.1. Adding the Dev User to the Dev Group that have s3 FullAccess Policy
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/705503a1-28c8-46aa-89df-4fd1b5605eaf" width="700" >
+
+3.2. Trying to see that only have S3Access With Cli
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/5fcc5e56-98b0-42be-966f-a9efde149e07" width="700" >
