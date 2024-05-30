@@ -1,0 +1,40 @@
+---
+- name: lab6
+  hosts: server
+  become: true
+  vars_files:
+    - secret.yml
+  tasks:
+    - name: Install MySQL
+      yum:
+        name: mysql-server
+        state: present
+
+    - name: Install MySQL Python library
+      yum:
+        name: python3-PyMySQL
+        state: present
+
+    - name: Ensure MySQL service is started and enabled
+      service:
+        name: mysqld
+        state: started
+        enabled: yes
+
+    - name: Create MySQL database
+      mysql_db:
+        name: my_database
+
+    - name: Create MySQL user
+      mysql_user:
+        name: "{{ database_user }}"
+        password: "{{ database_user_password }}"
+        priv: "*.*:ALL"
+        state: present
+
+    - name: Ensure user has privileges to create tables
+      mysql_user:
+        name: "{{ database_user }}"
+        priv: "my_database.*:ALL"
+        state: present
+
