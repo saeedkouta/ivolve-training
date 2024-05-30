@@ -16,7 +16,7 @@ add become password , user and password of mysql user
 
 #### Step 3: Create ansible.cfg file
 
-<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/b7fbc082-9eef-4559-b392-98ab2c8d822e" width="700" >
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/a86502c2-205e-447a-be60-b23045ba541c" width="700" >
 
 #### Step 4: Create playbook.yml file
 
