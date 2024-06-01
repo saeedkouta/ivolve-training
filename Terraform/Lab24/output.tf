@@ -1,5 +1,5 @@
-output "vpc_iid" {
-  value = aws_vpc.main.id
+output "vpc_id" {
+  value = aws_vpc.lab24-vpc.id
 }
 
 output "public_subnet_id" {
@@ -11,7 +11,7 @@ output "private_subnet_ids" {
 }
 
 output "ec2_instance_id" {
-  value = aws_instance.web.id
+  value = aws_instance.lab24-ec2.id
 }
 
 output "rds_instance_id" {
