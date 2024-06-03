@@ -37,7 +37,17 @@ create encripted password
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/e919f49a-18b3-46c4-8ca2-e23bb4818d75" width="700" >
 
-#### Step 6: 6. Verify the MySQL Configuration
+#### Step 6: Verify the Qouta :
+
+we made the NameSpace Qouta is 4 pods limit and trying to make deployment with 5 replicas
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/cfee1617-b3f9-493d-b2f7-919aeefaf069" width="700" >
+
+there is 3 pods is running and the forth pod can't run because of no enough resources 
+
+and the fifth beacause of the limit of pods number
+
+#### Step 7: Verify the MySQL Configuration
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/5de8af04-6e4e-4265-8a46-1d142d440be8" width="700" >
 
