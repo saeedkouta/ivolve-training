@@ -1,0 +1,12 @@
+- name: Ping Dynamic inventory
+  hosts: ubuntu
+  remote_user: ubuntu
+
+  tasks:
+   - name: ping dynamic inventory
+     ping:
+
+   - name: Ensure a file exists
+     file:
+       path: ~/file1.txt
+       state: touch
