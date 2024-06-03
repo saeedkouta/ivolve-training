@@ -56,7 +56,6 @@ apply it using :
 ```
 kubectl apply -f ingress.yml
 ```
-<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/8a97a471-2a60-45e4-8842-d73bf77dc0fc" width= "700" >
 
 #### Step 6: Update /etc/hosts
 
