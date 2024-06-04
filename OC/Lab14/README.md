@@ -47,6 +47,10 @@ helm version
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/dca96a59-a637-44af-93ad-b81e165bdd0a" width="1000" >
 
+### Step 7 : to delete the Chart use
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/363b5588-e55c-40df-86aa-06e9a4cdb771" width="1000" >
+
 
 
 
