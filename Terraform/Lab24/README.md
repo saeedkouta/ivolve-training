@@ -1,127 +1,51 @@
-## description
-### This project contains Terraform configuration files to provision a multi-tier infrastructure on AWS. The infrastructure comprises an EC2 instance, a Virtual Private Cloud (VPC) with both public and private subnets, and an Amazon Relational Database Service (RDS) instance.
+# Description
+## This project contains Terraform configuration files to provision a multi-tier infrastructure on AWS. The infrastructure comprises an EC2 instance, a Virtual Private Cloud (VPC) with both public and private subnets, and an Amazon Relational Database Service (RDS) instance.
 
-#### Step 1: Create main.tf file
+### Step 1: Create main.tf file
 
-##### it contains:
+#### it contains:
 
-1- provider resources:
-```
-provider "aws" {
-  region = var.aws_region
-}
-```
+#### 1- provider resources:
 
-2- vpc resources:
-```
-resource "aws_vpc" "lab24-vpc" {
-  cidr_block = var.vpc_cidr_block
-  tags = {
-     Name = "lab24-vpc"  
-   }
-}
-```
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/d5c14f46-6283-422b-971e-6ee481b7e086" width="1000" >
 
-3- internet gateway resources:
-```
-resource "aws_internet_gateway" "lab24-igw" {
-  vpc_id = aws_vpc.lab24-vpc.id
-  tags = {
-    Name = "lab24-igw"
-  }
-}
-```
+#### 2- vpc resources:
 
-4-  public subnet resources:
-```
-resource "aws_subnet" "public" {
-  vpc_id            = aws_vpc.lab24-vpc.id
-  cidr_block        = var.public_subnet_cidr
-  map_public_ip_on_launch = true
-  availability_zone = var.availability_zones[0]
-  tags = {
-     Name = "lab24-public-subnet"  
-   }
-}
-```
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/a3cdcb8d-dfbd-4698-8497-138c4d951b27" width="1000" >
 
-5- 2 private subnets resorce:
-```
-resource "aws_subnet" "private" {
-  for_each = {
-    for index, cidr in var.private_subnet_cidrs : index => {
-      cidr_block        = cidr
-      availability_zone = var.availability_zones[index]
-    }
-  }
-  vpc_id            = aws_vpc.lab24-vpc.id
-  cidr_block        = each.value.cidr_block
-  availability_zone = each.value.availability_zone
-  tags = {
-    Name = "private-${each.key}"
-  }
-}
-```
+#### 3- internet gateway resources:
 
-6- EC2 resource:
-```
-resource "aws_instance" "lab24-ec2" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  subnet_id     = aws_subnet.public.id
-  tags = {
-   Name = "lab24-ec2"
-  }
-}
-```
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/3777060f-f8fb-4cf9-ac58-8e1a5af4e8ae" width="1000" >
 
-7- route table resources:
-```
-resource "aws_route_table" "lab24-public-rt" {
-  vpc_id = aws_vpc.lab24-vpc.id
-  route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.lab24-igw.id
-  }
-  tags = {
-    Name = "lab24-public-rt"
-  }
-}
-```
+#### 4-  public subnet resources:
 
-8- rt association resources:
-```
-resource "aws_route_table_association" "lab24-public-rt-assoc" {
-  subnet_id      = aws_subnet.public.id
-  route_table_id = aws_route_table.lab24-public-rt.id
-}
-```
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/eaa37cce-4e40-4e7a-8bb2-d0067ffd852e" width="1000" >
 
-9- rds subnet group resources:
-```
-resource "aws_db_subnet_group" "rds_subnet_group" {
-  name        = "new-rds-subnet-group"
-  subnet_ids  = [for subnet in aws_subnet.private : subnet.id]
-}
-```
+#### 5- 2 private subnets resorce:
 
-10- database resources:
-```
-resource "aws_db_instance" "database" {
-  identifier              = var.db_identifier
-  engine                  = var.db_engine
-  engine_version          = var.db_engine_version
-  instance_class          = var.db_instance_class
-  allocated_storage       = var.db_allocated_storage
-  db_name                 = var.db_name
-  username                = var.db_username
-  password                = var.db_password
-  db_subnet_group_name    = aws_db_subnet_group.rds_subnet_group.name
-  skip_final_snapshot = true
-}
-```
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/684fd260-ea0c-44d8-b3c5-27aab5b17e33" width="1000" >
 
-#### Step 2: Create vars.tf file
+#### 6- EC2 resource:
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/d2829a1b-e6d4-4cb4-9305-d8da039071fc" width="1000" >
+
+#### 7- route table resources:
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/9f2ce7ae-c1e4-4ee2-ae3d-9657ae7aa4ca" width="1000" >
+
+#### 8- rt association resources:
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/51e3b6f0-1242-40ea-a4ad-444f7d7e3dc4" width="1000" >
+
+#### 9- rds subnet group resources:
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/b83e169f-8c56-41f4-99da-7b9af4e61c5e" width="1000" >
+
+#### 10- database resources:
+
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/0dbffc52-eaf9-45ad-8adc-ba28c3168fcb" width="1000" >
+
+### Step 2: Create vars.tf file
 
 ```
   description = "List of availability zones to use for the subnets"
@@ -180,7 +104,7 @@ variable "db_password" {
 }
 ```
 
-#### Step 3: Create output.tf file
+### Step 3: Create output.tf file
 ```
 output "vpc_id" {
   value = aws_vpc.lab24-vpc.id
@@ -205,45 +129,46 @@ output "rds_instance_id" {
 
 ### step 4: Run terraform commands
 
-1- terraform init:
+#### 1- terraform init:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/c14f3b58-ed8f-439b-8377-12e9f2d2117b" width="700" >
 
-2- terraform plan:
+#### 2- terraform plan:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/8feeb51c-f599-48e9-b5b7-b902191aef50" width="700" >
 
-3- terraform apply:
+#### 3- terraform apply:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/56195967-c809-433e-ab2f-adabc3c13b8f" width="700" >
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/184d4342-50a3-4d68-b5ea-d71677297cfd" width="700" >
 
-#### Step 5: Show the infrastructure that we made:
+### Step 5: Show the infrastructure that we made:
 
-1- the vpc:
+#### 1- the vpc:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/d6f4c09b-8ad7-404c-827d-6fa30ee70877" width="700" >
 
-2- the igw:
+#### 2- the igw:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/5f6b9a59-12f3-442c-9073-ba136680d4a1" width="700" >
 
-3- the subnets:
+#### 3- the subnets:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/2e92014d-2304-4275-b907-0557dd45d472" width="700" >
 
-4- the route table:
+#### 4- the route table:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/1b9f1e96-e2b2-45b8-a7be-423478ded952" width="700" >
 
-5- the database:
+#### 5- the database:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/ace1eac5-38f6-498c-b387-5404757073ea" width="700" >
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/aa9ce02c-17cb-4d48-b539-324ecb94fb30" width="700" >
 
 #### after finishing the Lab we use destroy command to end our work:
+
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/249fa4dd-d777-4a3b-b9ae-b0b3afb3906b" width="700" >
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/2868f015-c9a6-405b-b86c-03a9a6b6353a" width="700" >
