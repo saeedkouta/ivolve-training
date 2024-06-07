@@ -77,7 +77,7 @@
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/b80e1ce9-0140-4359-9e9d-e6b1c48c2964" width="1000" >
 
-#### We Can Delete The Application By clicking on The Apllication then choose delete application
+#### We Can Delete The Application with right click on The Apllication then choose delete application
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/ddb28f1b-a19c-4b56-8cdd-10bbcefb2f5b" width="1000" >
 
