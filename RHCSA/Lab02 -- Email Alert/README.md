@@ -12,7 +12,7 @@ sudo apt-get install msmtp -y
 
 ### Step 2: onfigure ~/.msmtp file
 
-<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/54c0acb2-3d77-411c-903d-75dde3051d37" width="1000" >
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/6302b497-fa43-4bac-b50c-e55d6c5e601d" width="1000" >
 
 #### Make sure to secure the .msmtprc file so only you can read it:
 ```
