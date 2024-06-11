@@ -33,7 +33,7 @@
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/529eb7f2-78f8-4d5b-a753-c95735b3b37c" width="700" >
 
-#### 2- defualts file:
+#### 2- defaults file:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/64f78638-7950-49b9-b226-a67751f6e657" width="700" >
 
@@ -81,7 +81,7 @@
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/0da0b651-9400-4ff3-b9e0-d24cce97038c" width="700" >
 
-#### 3- defualts file:
+#### 3- defaults file:
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/77bdaae2-bac9-46ea-9343-6b24b88dab13" width="700" >
 
@@ -101,7 +101,7 @@
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/d7f3806f-1e2e-4bc1-bf0a-6798fa36bccf" width="700" >
 
-#### 2- defualts file
+#### 2- defaults file
 
 <img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/d1a0e93a-baa5-4766-8221-3d2fced88e17" width="700" >
 
