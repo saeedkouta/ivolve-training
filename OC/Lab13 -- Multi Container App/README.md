@@ -3,7 +3,7 @@
 
 ### Step 1: Create the Deployment file that contains the jenkins container and the init container
 
-<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/80e58c8c-8ea1-4979-9cb1-cc7fdf1b23a6" width="1000" >
+<img src="https://github.com/saeedkouta/ivolve-training/assets/167209058/46725a7c-fb36-4237-a910-a3516df610e4" width="1000" >
 
 ### Step 2: Create service file
 
